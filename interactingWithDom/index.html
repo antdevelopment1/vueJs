@@ -9,7 +9,9 @@
 </head>
 <body>
     <div id="app">
-        <p>{{sayHello()}}</p>
+        <!-- Binds the state of the a tag to actually take us to google otherwise it will error -->
+        <!-- This is also called a directive and instruction that allows us to bind data to an html attribute -->
+        <p>{{sayHello()}} - <a v-bind:href="link">Google</a></p>
         <p>{{title}}</p>
         <p>{{getTitle()}}</p>
     </div>
