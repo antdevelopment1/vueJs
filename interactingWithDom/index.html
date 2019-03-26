@@ -11,9 +11,12 @@
     <div id="app">
         <!-- Binds the state of the a tag to actually take us to google otherwise it will error -->
         <!-- This is also called a directive and instruction that allows us to bind data to an html attribute -->
+        <h1 v-once>{{title}}</h1>
         <p>{{sayHello()}} - <a v-bind:href="link">Google</a></p>
         <p>{{title}}</p>
         <p>{{getTitle()}}</p>
+        <!-- This allows us to render a property on an object where the keys value is a html element -->
+        <p v-html="finishLink"></p>
     </div>
     <script src="scripts.js"></script>
 </body>
