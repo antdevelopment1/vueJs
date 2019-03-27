@@ -1,15 +1,12 @@
 new Vue({
     el: '#app',
     data: {
-        title: 'Vue.js',
-        introFirstName: 'April',
-        introLastName: ' Copes',
-        age: 27 * 3,
-        image: 'https://getyourpet.com/adopt-a-pitbull-or-rehome-a-pitbull-in-phoenix/'
+        counter: 0
     },
     methods: {
-        random() {
-            return Math.random() * 1;
+        increase() {
+            this.counter = this.counter + 1;
+            // this.counter++;
         }
     }
 });

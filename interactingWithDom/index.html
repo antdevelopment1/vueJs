@@ -9,12 +9,8 @@
 </head>
 <body>
     <div id="app">
-        <p>Vuejs is super cool. - {{introFirstName}}{{introLastName}} <br>
-            I am {{age}} years old.
-        </p>
-        <p>{{random()}}</p>
-        <p>Below is picture of my dog.</p>
-        <img v-bind:src="image" style="width:500px; height:500px">
+        <button v-on:click="increase">Click Me</button>
+        <p>{{ counter }}</p>
     </div>
     <script src="scripts.js"></script>
 </body>
