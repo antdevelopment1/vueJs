@@ -13,6 +13,9 @@ new Vue({
         updateCoordinates() {
             this.x = event.clientX;
             this.y = event.clientY;
-        }
+        },
+        // dummy(event) {
+        //     event.stopPropagation();
+        // }
     }
 });
