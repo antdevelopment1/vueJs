@@ -1,19 +1,19 @@
 new Vue({
     el: '#app',
     data: {
-        value: '',
         counter: 0,
-        name: 'Hello There'
+        secondCounter: 0
+    },
+    computed: {
+        output() {
+            console.log('Computed');
+            return this.counter > 5 ? 'Greater than 5' : 'Less than 5';
+        }
     },
     methods: {
-        alertMe() {
-            alert('Alert');
-        },
-        increase(num) {
-            this.counter += num
-        },
-        descrease(num) {
-            this.counter -= num
+        result() {
+            console.log('Method')
+            return this.counter > 5 ? 'Greater than 5' : 'Less than 5';
         }
     }
 });
