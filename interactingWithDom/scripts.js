@@ -16,6 +16,9 @@ new Vue({
         },
         // dummy(event) {
         //     event.stopPropagation();
-        // }
+        // },
+        alertMe() {
+            alert('Alert');
+        }
     }
 });
