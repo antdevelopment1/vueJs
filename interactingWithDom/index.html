@@ -9,14 +9,12 @@
 </head>
 <body>
     <div id="app">
-        <!-- Binds the state of the a tag to actually take us to google otherwise it will error -->
-        <!-- This is also called a directive and instruction that allows us to bind data to an html attribute -->
-        <h1 v-once>{{title}}</h1>
-        <p>{{sayHello()}} - <a v-bind:href="link">Google</a></p>
-        <p>{{title}}</p>
-        <p>{{getTitle()}}</p>
-        <!-- This allows us to render a property on an object where the keys value is a html element -->
-        <p v-html="finishLink"></p>
+        <p>Vuejs is super cool. - {{introFirstName}}{{introLastName}} <br>
+            I am {{age}} years old.
+        </p>
+        <p>{{random()}}</p>
+        <p>Below is picture of my dog.</p>
+        <img v-bind:src="image" style="width:500px; height:500px">
     </div>
     <script src="scripts.js"></script>
 </body>
