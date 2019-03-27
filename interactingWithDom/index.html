@@ -11,6 +11,7 @@
     <div id="app">
         <button v-on:click="increase">Click Me</button>
         <p>{{ counter }}</p>
+        <p v-on:mousemove="updateCoordinates">Coordinates: {{x}} / {{y}}</p>
     </div>
     <script src="scripts.js"></script>
 </body>
