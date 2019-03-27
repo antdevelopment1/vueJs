@@ -2,7 +2,8 @@ new Vue({
     el: '#app',
     data: {
         value: '',
-        counter: 0
+        counter: 0,
+        name: 'Hello There'
     },
     methods: {
         alertMe() {

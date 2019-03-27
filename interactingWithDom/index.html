@@ -13,8 +13,10 @@
         <button v-on:click="descrease(5)">Click Me</button>
         <button v-on:click="counter++">Click Me</button>
         <p>{{counter}}</p>
-        <!-- <input type="text" v-on:keydown.enter="value = $event.target.value">
-        <p>{{value}}</p> -->
+        <!-- <input type="text" v-on:keydown.enter="value = $event.target.value"> -->
+        <input type="text" v-model="name">
+        <p>{{name}}</p>
+        <p>{{value}}</p>
         <p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Less than 10' }}</p>
     </div>
     <script src="scripts.js"></script>
