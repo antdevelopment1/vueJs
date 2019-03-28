@@ -1,27 +1,19 @@
 new Vue({
-    el: '#app',
+    el: "#app",
     data: {
-        counter: 0,
-        secondCounter: 0
+        value: 0
     },
     computed: {
-        output() {
-            console.log('Computed');
-            return this.counter > 5 ? 'Greater than 5' : 'Less than 5';
+        result() {
+            return this.value >= 37 ? 'Done' : 'Not there yet'
         }
     },
     watch: {
-        counter(value) {
-            var vm = this;
-            setTimeout(function() {
-                vm.counter = 0;
-            }, 2000)
-        }   
-    },
-    methods: {
         result() {
-            console.log('Method')
-            return this.counter > 5 ? 'Greater than 5' : 'Less than 5';
+            let vm = this;
+            setTimeout(function() {
+                vm.value = 0;
+            }, 2000)
         }
     }
-});
+})
