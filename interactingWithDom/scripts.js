@@ -5,4 +5,12 @@ new Vue({
         attachGreen: false,
         attachBlue: false
     },
+    computed: {
+        divClasses() {
+            return {
+                red: this.attachRed,
+                blue: !this.attachRed
+            }
+        }
+    }
 })
