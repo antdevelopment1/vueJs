@@ -13,6 +13,9 @@
         <p v-if="show">Second</p>
         <p v-else="show">How about this one</p>
         <button @click="show = !show">Toggle</button>
+        <ul>
+            <li v-for="num, index in numbers">The index of {{num}} is {{index}}</li>
+        </ul>
     </div>
     <script src="scripts.js"></script>
 </body>
