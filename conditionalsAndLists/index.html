@@ -16,8 +16,8 @@
                 <li v-for="person in persons">
                     <!-- {{person.name}} -->
                     <!-- Give us each value inside our objects -->
-                    <span v-for="value, key in person">
-                       {{key}}: {{value}}
+                    <span v-for="value, key, index in person">
+                       {{key}}: {{value}} {{index}} is my index value.
                     </span>
                 </li>
             </ul>
