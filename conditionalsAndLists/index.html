@@ -14,6 +14,11 @@
             <li v-for="ingrediant in ingrediants">{{ingrediant}}</li>
             <li>{{ingrediants[0]}}</li>
             <li v-for="ingrediant, i in ingrediants">{{i}} {{ingrediants}}</li>
+
+            <template v-for="ingrediant, index in ingrediants">
+                <h1>{{index}}</h1>
+                <p>{{ingrediant}}</p>
+            </template>
         </ul>
     </div>
     <script src="scripts.js"></script>
