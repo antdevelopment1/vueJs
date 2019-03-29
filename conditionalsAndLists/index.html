@@ -10,6 +10,17 @@
 <body>
     <div id="app">
         <ul>
+            <hr>
+            <ul>
+                <!-- Looping through objects -->
+                <li v-for="person in persons">
+                    <!-- {{person.name}} -->
+                    <!-- Give us each value inside our objects -->
+                    <span v-for="value, key in person">
+                       {{key}}: {{value}}
+                    </span>
+                </li>
+            </ul>
             <!-- This is really epic -->
             <li v-for="ingrediant in ingrediants">{{ingrediant}}</li>
             <li>{{ingrediants[0]}}</li>
