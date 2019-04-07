@@ -1,11 +1,8 @@
 <template>
-    <h1>Hello Wolrd</h1>
+   <app-servers></app-servers>
 </template>
 
 <script>
-export default {
-  
-}
 </script>
 
 <style>
