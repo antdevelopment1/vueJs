@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-       <app-header></app-header>
+       <appHeader></appHeader>
         <hr>
         <div class="row">
-            <app-servers></app-servers>
+            <Servers></Servers>
             <app-server-details></app-server-details>
         </div>
         <hr>
@@ -19,9 +19,9 @@
 
     export default {
         components: {
-            'app-header': Header,
+            appHeader: Header,
             'app-footer': Footer,
-            'app-servers': Servers,
+            Servers,
             'app-server-details': ServerDetails
         }
     }
