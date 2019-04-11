@@ -6,7 +6,5 @@
 
 <script></script>
 <style scoped>
-    div {
-        border: 20px solid red;
-    }
+   
 </style>
