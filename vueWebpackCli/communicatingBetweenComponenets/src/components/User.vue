@@ -3,13 +3,14 @@
         <h1>The User Component</h1>
         <p>I am an awesome User!</p>
         <button @click="changeName">Change My Name</button>
+        <p>My Current Name is {{ name }}</p>
         <hr>
         <div class="row">
             <div class="">
-                <user-detail></user-detail>
+                <user-detail :name="name" @nameWasReset="name = $event"></user-detail>
             </div>
             <div class="">
-                <UserEdit></UserEdit>   
+                <user-edit></user-edit>   
             </div>
         </div>
     </div>
