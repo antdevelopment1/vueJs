@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <appUser></appUser>
+    <div class="border">
+        <div>
+            <div>
+                <user></user>
             </div>
         </div>
     </div>
@@ -12,15 +12,15 @@
     import User from './components/User.vue';
     export default {
         components: {
-            appUser: User
+            User
         }
     }
 </script>
 
-<style>
-    div.component  {
+<style scoped>
+    .border  {
         border: 1px solid black;
-        box-shadow: 3px 3px 3px rgba(0,0,0,.7);
-        padding: 30px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,.7);
     }
+    
 </style>

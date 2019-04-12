@@ -5,11 +5,11 @@
         <button @click="changeName">Change My Name</button>
         <hr>
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <appUserDetail :name="name"></appUserDetail>
+            <div class="">
+                <user-detail></user-detail>
             </div>
-            <div class="col-xs-12 col-sm-6">
-                <appUserEdit></appUserEdit>   
+            <div class="">
+                <UserEdit></UserEdit>   
             </div>
         </div>
     </div>
@@ -19,9 +19,10 @@
     import UserDetail from './UserDetail.vue';
     import UserEdit from './UserEdit.vue';
     export default {
+        name: "user",
         components:  {
-            appUserDetail: UserDetail,
-            appUserEdit: UserEdit
+            UserDetail,
+            UserEdit
         },
         data: function() {
             return {
