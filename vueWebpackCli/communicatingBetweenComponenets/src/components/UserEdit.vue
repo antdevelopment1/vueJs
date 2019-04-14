@@ -1,14 +1,23 @@
 <template>
     <div>
-        <h1>Edit Name:</h1>
-        <h1>Edit Number:</h1>
+        <h3>You may edit the user here.</h3>
+        <h1>Edit Me:</h1>
+        <p>User Age: {{ userAge }}</p>
+        <button @click="editAge">Edit Age</button>
     </div>
 </template>
 
 
 <script>
     export default {
-        name: "user-edit"
+        name: "user-edit",
+        props: ['userAge'],
+        methods: {
+            editAge() {
+                this.userAge = 30;
+                this.$emit('ageWasEdited', this.userAge);
+            }
+        }
     }
 </script>
 

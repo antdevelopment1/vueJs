@@ -7,10 +7,19 @@
         <hr>
         <div class="row">
             <div class="">
-                <user-detail :name="name" @nameWasReset="name = $event" :resetFn="resetName"></user-detail>
+                <user-detail 
+                    :name="name" @nameWasReset="name = $event" 
+                    :resetFn="resetName"
+                    :userAge="age"
+                >
+                </user-detail>
             </div>
             <div class="">
-                <user-edit></user-edit>   
+                <user-edit 
+                    :userAge="age"
+                    @ageWasEdited="age = $event"
+                >
+                </user-edit>   
             </div>
         </div>
     </div>
@@ -27,7 +36,8 @@
         },
         data: function() {
             return {
-                name: 'April'
+                name: 'April',
+                age: 27
             }
         },
         methods: {
