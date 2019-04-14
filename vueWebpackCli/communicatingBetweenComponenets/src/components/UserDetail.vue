@@ -10,6 +10,7 @@
 </template>
 
 <script>
+    import {eventBus} from './../main.js';
     export default {
         name: "user-detail",
         props: {
@@ -27,6 +28,11 @@
                 this.name = 'April';
                 this.$emit('nameWasReset', this.name);
             }
+        },
+        created() {
+            eventBus.$on('ageWasEdited', (data) => {
+                this.userAge = data;
+            });
         }
     }
 </script>
