@@ -7,7 +7,7 @@
         <hr>
         <div class="row">
             <div class="">
-                <user-detail :name="name" @nameWasReset="name = $event"></user-detail>
+                <user-detail :name="name" @nameWasReset="name = $event" :resetFn="resetName"></user-detail>
             </div>
             <div class="">
                 <user-edit></user-edit>   
@@ -33,6 +33,10 @@
         methods: {
             changeName() {
                 this.name = 'Anna';
+            },
+            resetName() {
+                this.name = 'April Loves Socks';
+                this.$emit('nameWasReset', this.name);
             }
         }
     }
