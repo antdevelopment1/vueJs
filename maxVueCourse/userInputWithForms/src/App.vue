@@ -11,7 +11,7 @@
                                 type="text"
                                 id="email"
                                 class="form-control"
-                                v-model="userData.email">
+                                v-model.lazy="userData.email">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
