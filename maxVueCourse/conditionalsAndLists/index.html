@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-if="show">First</p>
+        <p v-if="show">Second</p>
+        <p v-else="show">How about this one</p>
+        <button @click="show = !show">Toggle</button>
+        <ul>
+            <li v-for="num, index in numbers">The index of {{num}} is {{index}}</li>
+            <li v-for="key, value, index in stuff">{{key}} : {{value}} and the index is {{index}}</li>
+        </ul>
+        <br>
+        <ul>
+            <li v-for="value in nextStuff">{{value}}
+            <template v-if="Array.isArray(value)">
+                <div v-for="internalValue in value">{{internalValue}}</div>
+            </template>
+            <template v-else>
+                {{value}}
+            </template>
+            </li>
+        </ul>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
