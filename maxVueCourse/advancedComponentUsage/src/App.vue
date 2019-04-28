@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-xs-12">
                <quote>
-                   <h2>{{quoteTitle}}</h2>
-                   <p>{{quoteBody}}</p>
+                   <h2 slot="title">{{quoteTitle}}</h2>
+                   <p slot="content">{{quoteBody}}</p>
                </quote>
             </div>
         </div>
