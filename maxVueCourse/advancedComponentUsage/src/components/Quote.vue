@@ -2,10 +2,11 @@
     <div>
         <div class="title">
             <slot name="title"></slot>
+            
         </div>
         <hr>
         <div>
-            <slot name="content"></slot>
+            <slot></slot>
         </div>
     </div>
 </template>
