@@ -5,6 +5,7 @@
                <quote>
                    <h2 slot="title">{{quoteTitle}}</h2>
                    <p>{{quoteBody}}</p>
+                   <span slot="subtitle">Some more stuff goes here.</span>
                </quote>
             </div>
         </div>
