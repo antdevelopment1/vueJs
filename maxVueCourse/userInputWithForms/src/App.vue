@@ -106,7 +106,10 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                     <button
-                            class="btn btn-primary">Submit!
+                            class="btn btn-primary"
+                             @click.prevent="submitted"
+                            >Submit!
+                           
                     </button>
                 </div>
             </div>
@@ -118,7 +121,7 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div v-if="isSubmitted" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4>Your Data</h4>
@@ -160,7 +163,13 @@
                 gender: 'Male',
                 selectedPriority: 'High',
                 priorities: ['High', 'Medium', 'Low'],
-                dataSwitch: true
+                dataSwitch: true,
+                isSubmitted: false
+            }
+        },
+        methods: {
+            submitted() {
+                this.isSubmitted = true;
             }
         }
     }
